@@ -310,6 +310,8 @@ body::before {
 
 .impact-card {
     position: relative;
+    display: flex;
+    flex-direction: column;
     appearance: none;
     background: transparent;
     border: 0;
@@ -319,6 +321,7 @@ body::before {
     cursor: pointer;
     font-family: inherit;
     transition: transform .2s ease, background .2s ease;
+    height: 100%;
 }
 
 .impact-card:last-child {
@@ -360,14 +363,19 @@ body::before {
 .tier-description {
     display: block;
     font-size: 14px;
+    font-family: var(--sans);
+    color: var(--muted);
     line-height: 1.45;
 }
 
 .tier-benefit {
     display: block;
     font-size: 11px;
+    font-family: var(--sans);
+    color: var(--muted);
     line-height: 1.45;
-    margin-top: 18px;
+    margin-top: auto;
+    padding-top: 18px;
 }
 
 
