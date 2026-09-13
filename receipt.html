@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akhtober — Order Receipt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .receipt-page {
+      min-height: 100vh;
+      padding: 55px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .receipt-top {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .18em;
+    }
+
+    .receipt-wrap {
+      width: min(720px, 100%);
+      margin: 80px auto 100px;
+    }
+
+    .receipt-mark {
+      text-align: center;
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .receipt-heading {
+      text-align: center;
+    }
+
+    .receipt-heading h1 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(48px, 7vw, 76px);
+      font-weight: 500;
+      line-height: .9;
+      letter-spacing: -.055em;
+    }
+
+    .receipt-heading p {
+      margin: 18px 0 0;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .receipt-card {
+      margin-top: 55px;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+      padding: 30px 0;
+    }
+
+    .receipt-meta {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 25px;
+      border-bottom: 1px solid var(--line);
+      font-size: 10px;
+    }
+
+    .receipt-meta span:first-child {
+      color: var(--muted);
+    }
+
+    .receipt-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .receipt-row:last-child {
+      border-bottom: 0;
+    }
+
+    .receipt-label {
+      font-family: var(--serif);
+      font-size: 15px;
+    }
+
+    .receipt-value {
+      text-align: right;
+      font-size: 12px;
+    }
+
+    .receipt-value small {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 9px;
+    }
+
+    .receipt-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-top: 25px;
+      margin-top: 5px;
+      border-top: 1px solid var(--ink);
+    }
+
+    .receipt-total span {
+      font-family: var(--serif);
+      font-size: 18px;
+    }
+
+    .receipt-total strong {
+      font-family: var(--serif);
+      font-size: 30px;
+    }
+
+    .receipt-thanks {
+      text-align: center;
+      margin-top: 45px;
+    }
+
+    .receipt-thanks h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 25px;
+      font-weight: 500;
+    }
+
+    .receipt-thanks p {
+      max-width: 480px;
+      margin: 12px auto 0;
+      font-size: 11px;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .receipt-actions {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 35px;
+    }
+
+    .receipt-button {
+      padding: 13px 22px;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: var(--cream);
+      font-family: var(--sans);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .receipt-button.secondary {
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .receipt-footer {
+      margin-top: auto;
+      text-align: center;
+    }
+
+    .receipt-footer-logo {
+      font-size: 34px;
+      letter-spacing: -.07em;
+    }
+
+    @media print {
+      body::before { display: none; }
+      .receipt-page { padding: 35px; }
+      .receipt-actions { display: none; }
+    }
+
+    @media (max-width: 600px) {
+      .receipt-page { padding: 30px 22px; }
+      .receipt-wrap { margin-top: 60px; }
+      .receipt-meta { gap: 20px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="receipt-page">
+
+    <div class="receipt-top">
+      <span>ALPHA LAMBDA MU</span>
+      <span>AKHTOBER / FALL 2026</span>
+    </div>
+
+    <section class="receipt-wrap">
+
+      <div class="receipt-mark">✿</div>
+
+      <div class="receipt-heading">
+        <h1>ORDER RECEIVED.</h1>
+        <p>Thank you for supporting Akhtober.</p>
+      </div>
+
+      <div class="receipt-card">
+
+        <div class="receipt-meta">
+          <span>ORDER RECEIPT</span>
+          <span id="receiptDate"></span>
+        </div>
+
+        <div class="receipt-row">
+          <span class="receipt-label">Jacket</span>
+          <span class="receipt-value">
+            <span id="jacketQuantity">1</span> × $45
+            <small id="jacketSize">Size —</small>
+          </span>
+        </div>
+
+        <div class="receipt-row">
+          <span class="receipt-label">Additional Support</span>
+          <span class="receipt-value">
+            <span id="supportAmount">$0.00</span>
+            <small id="supportTier">No additional support</small>
+          </span>
+        </div>
+
+        <div class="receipt-row">
+          <span class="receipt-label">Shipping To</span>
+          <span class="receipt-value" id="shippingInfo">—</span>
+        </div>
+
+        <div class="receipt-total">
+          <span>TOTAL</span>
+          <strong id="receiptTotal">$45.00</strong>
+        </div>
+
+      </div>
+
+      <div class="receipt-thanks">
+        <h2>Beyond the jacket. Make a difference.</h2>
+        <p>
+          Your purchase helps turn a piece of clothing into direct support
+          for people and families who need it. Keep this page for your records.
+        </p>
+      </div>
+
+      <div class="receipt-actions">
+        <a class="receipt-button secondary" href="index.html">BACK TO AKHTOBER</a>
+        <button class="receipt-button" onclick="window.print()">PRINT RECEIPT</button>
+      </div>
+
+    </section>
+
+    <footer class="receipt-footer">
+      <div class="receipt-footer-logo">✿akhtober</div>
+    </footer>
+
+  </main>
+
+  <script>
+    const raw = sessionStorage.getItem("akhtoberReceipt");
+
+    if (!raw) {
+      document.querySelector(".receipt-wrap").innerHTML = `
+        <div class="receipt-heading">
+          <h1>NO RECEIPT.</h1>
+          <p>Start an order from the Akhtober page.</p>
+          <div class="receipt-actions">
+            <a class="receipt-button" href="index.html">BACK TO AKHTOBER</a>
+          </div>
+        </div>
+      `;
+    } else {
+      const order = JSON.parse(raw);
+
+      document.getElementById("receiptDate").textContent = order.date;
+      document.getElementById("jacketQuantity").textContent = order.quantity;
+      document.getElementById("jacketSize").textContent = "Size " + order.size;
+      document.getElementById("supportAmount").textContent =
+        "$" + Number(order.donation).toFixed(2);
+      document.getElementById("supportTier").textContent = order.tier;
+
+      document.getElementById("shippingInfo").innerHTML =
+        `${order.name}<br>${order.address}<br>${order.city}, ${order.state} ${order.zip}<small>${order.email}</small>`;
+
+      document.getElementById("receiptTotal").textContent =
+        "$" + Number(order.total).toFixed(2);
+    }
+  </script>
+</body>
+</html>

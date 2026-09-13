@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akhtober — This Jacket Saves Lives</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+    <main class="page">
+        <section class="hero">
+            <div class="top-meta">
+                <span>BY ALPHA LAMBDA MU</span>
+                <span>AKHTOBER, FALL 2026</span>
+            </div>
+
+            <h1>THIS JACKET SAVES LIVES.</h1>
+
+            <div class="hero-grid">
+                <div class="intro-block intro-left">
+                    <h2 style="text-align: center;">WHAT IS<br>AKHTOBER?</h2>
+                    <p>A community-driven campaign where every purchase directly funds vital relief efforts. 100% of proceeds provide immediate on-the-ground support to those in need.</p>
+                </div>
+
+                <div class="jacket-stack">
+                    <div class="jacket-area">
+                        <div class="jacket-main">
+                            <img src="assets/jacket-front.png" alt="Akhtober jacket front">
+                        </div>
+                    </div>
+
+                    <div class="jacket-caption">
+                        <div class="caption-title">The “Akhtober” Jacket</div>
+                        <strong>$45</strong>
+                        <a href="https://www.zeffy.com/en-US/ticketing/akhtober-store" target="_blank" rel="noopener noreferrer" class="action-button">BUY IT HERE</a>
+                        <div class="caption-tags">COMMUNITY&nbsp;&nbsp;/&nbsp;&nbsp;RELIEF&nbsp;&nbsp;/&nbsp;&nbsp;LASTING CHANGE</div>
+                    </div>
+                </div>
+
+                <div class="intro-block partners">
+                    <h2 style="text-align: center;">OUR<br>PARTNERS</h2>
+
+                    <div class="partner">
+                        <div class="logo-placeholder">
+                            <img src="assets/maruf-dallas.png" style="transform: scale(1.1);" alt="Maruf Dallas">
+                        </div>
+                        <p>Providing refugee<br>support and essential<br>humanitarian aid.</p>
+                    </div>
+
+                    <div class="partner">
+                        <div class="logo-placeholder">
+                            <img src="assets/peace-in-the-home.png" style="transform: scale(1.65);" alt="Peace in the Home">
+                        </div>
+                        <p>Supporting domestic<br>abuse survivors with<br>safe shelter.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="impact">
+            <div class="flower-mark">✿</div>
+            <p class="impact-kicker">Beyond the jacket. Make a difference</p>
+            <h2>CHOOSE YOUR IMPACT</h2>
+            <p class="impact-disclaimer">Funds are allocated by partner case workers where most needed; tier amounts illustrate the tangible impact of your gift.</p>
+
+            <div class="impact-grid">
+                <button type="button" class="impact-card" data-amount="25" onclick="selectDonation(25)">
+        <span class="tier-name">RELIVE</span><span class="tier-price">$25</span><span class="tier-icon">♧</span>
+        <span class="tier-description">Emergency shelter essentials like diapers, formula, and urgent medication for families.</span>
+        <span class="tier-benefit">Digital thank-you.</span>
+      </button>
+
+                <button type="button" class="impact-card" data-amount="50" onclick="selectDonation(50)">
+        <span class="tier-name">PROVIDE</span><span class="tier-price">$50</span><span class="tier-icon">□</span>
+        <span class="tier-description">A full month of groceries for a family establishing a stable home.</span>
+        <span class="tier-benefit">Name added to<br>campaign supporters.</span>
+      </button>
+
+                <button type="button" class="impact-card" data-amount="100" onclick="selectDonation(100)">
+        <span class="tier-name">PARTNER</span><span class="tier-price">$100</span><span class="tier-icon">♡</span>
+        <span class="tier-description">Vital vehicle repairs so a survivor can reliably commute to job interviews, daycare, and grocery stores.</span>
+        <span class="tier-benefit">Campaign update<br>report.</span>
+      </button>
+
+                <button type="button" class="impact-card" data-amount="250" onclick="selectDonation(250)">
+        <span class="tier-name">SPONSOR</span><span class="tier-price">$250</span><span class="tier-icon">♧</span>
+        <span class="tier-description">Six months of secure van transport for independent mobility and daily travel.</span>
+        <span class="tier-benefit">Recognition on<br>campaign page.</span>
+      </button>
+
+                <button type="button" class="impact-card" data-amount="500" onclick="selectDonation(500)">
+        <span class="tier-name">SUSTAIN</span><span class="tier-price">$500+</span><span class="tier-icon">☆</span>
+        <span class="tier-description">One month's safe, stable rent to give a survivor a secure place to start over.</span>
+        <span class="tier-benefit">Impact summary<br>and recognition.</span>
+      </button>
+            </div>
+        </section>
+
+        <section class="action-section">
+            <div class="donate-module">
+                <div class="flower-mark">✿</div>
+                <h2>SUPPORT AKHTOBER</h2>
+                <p>
+                    Every contribution supports domestic abuse survivors through Peace in the Home and Ma'ruf Dallas.
+                </p>
+                <a href="https://www.zeffy.com/en-US/ticketing/akhtober-store" target="_blank" rel="noopener noreferrer" class="action-button">
+        DONATE THROUGH ZEFFY
+      </a>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="faq-header">
+                <h2>FREQUENTLY ASKED QUESTIONS</h2>
+            </div>
+
+            <details>
+                <summary>Why does domestic abuse awareness matter?</summary>
+                <p>
+                    More than 1 in 3 women (nearly 43.5 million) and more than 1 in 6 men (20.7 million) have experienced sexual violence, physical violence, and/or stalking by an intimate partner during their lifetimes. On average, nearly 20 people per minute are physically
+                    abused by an intimate partner in the United States.
+                </p>
+                <p>
+                    Prevention requires awareness, education, honest conversations, resources, and communities willing to recognize the signs and support people experiencing abuse. That's what Akhtober is about.
+                </p>
+            </details>
+
+            <details>
+                <summary>What is Akhtober and why October?</summary>
+                <p>
+                    Akhtober is Alpha Lambda Mu's national philanthropic campaign—a month-long movement where every ALM chapter nationwide comes together to fundraise and volunteer for local women's shelters and organizations aiding domestic abuse survivors.
+                </p>
+                <p>
+                    October is Domestic Violence Awareness Month (DVAM), when advocates, allies, survivors, and communities commit to ending this epidemic.
+                </p>
+            </details>
+
+            <details>
+                <summary>Who are your partner organizations?</summary>
+                <p>
+                    <strong>Peace in the Home</strong> supports domestic abuse survivors with crisis services, shelter, legal aid, counseling, transitional housing, and economic empowerment programs.
+                </p>
+                <p>
+                    <strong>Ma'ruf Dallas</strong> provides refugee support, housing assistance, job placement, financial management, food security, and family stabilization services.
+                </p>
+            </details>
+
+            <details>
+                <summary>What does my donation actually fund?</summary>
+                <p>
+                    Your donation goes directly to the case workers at our partner organizations, Peace in the Home and Ma'ruf, who are on the front lines supporting domestic abuse survivors. Rather than a generic fund, every dollar is deployed by these trusted professionals to cover immediate, tangible needs as families transition to safety. Specific allocations are determined based on survivor needs.
+                </p>
+            </details>
+
+            <details>
+                <summary>Is my contribution Zakat-eligible?</summary>
+                <p>
+                    Yes. All funds raised through this campaign are distributed directly. These funds go toward supporting eligible recipients (such as families fleeing domestic abuse, unhoused individuals, and those in critical financial distress) to cover essential living needs, shelter, food, and emergency relief, making your contributions Zakat-eligible.
+                </p>
+            </details>
+
+            <details>
+                <summary>Is my donation tax-deductible?</summary>
+                <p>
+                    Yes. The Alpha Lambda Mu Foundation is a 501(c)(3) nonprofit charity. Donations are tax-deductible.
+                </p>
+            </details>
+
+            <details>
+                <summary>Does my employer offer donation matching?</summary>
+                <p>
+                    Many employers offer matching gift programs that can double or even triple your impact.
+                </p>
+                <p>
+                    Contact
+                    <a href="mailto:utdallas@alphalambdamu.org">
+          utdallas@alphalambdamu.org
+        </a> if you need assistance with documentation.
+                </p>
+            </details>
+
+            <details>
+                <summary>Can I donate anonymously?</summary>
+                <p>
+                    Yes. Anonymous donations remain tax-deductible and will not appear on public donor recognition lists.
+                </p>
+            </details>
+
+            <details>
+                <summary>Can I donate a different amount?</summary>
+                <p>
+                    Absolutely. Impact tiers are examples only. You may donate any amount.
+                </p>
+            </details>
+
+            <details>
+                <summary>How can I get involved beyond donating?</summary>
+                <ul>
+                    <li>Attend October events</li>
+                    <li>Share the campaign</li>
+                    <li>Volunteer with partners</li>
+                    <li>Become an advocate for healthy relationships</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>What if I'm experiencing domestic abuse?</summary>
+                <p>
+                    Help is available 24/7.
+                </p>
+                <ul>
+                    <li>National Domestic Violence Hotline: 1-800-799-SAFE (7233)</li>
+                    <li>Text START to 88788</li>
+                    <li>Crisis Text Line: Text HOME to 741741</li>
+                </ul>
+            </details>
+        </section>
+
+        <footer>
+            <div class="footer-logo">
+                <div class="flower-logo">✿</div>
+                <span>akhtober</span>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
